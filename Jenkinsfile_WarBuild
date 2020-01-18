@@ -11,18 +11,17 @@ pipeline{
   }
 
 stages{
-
    stage('SCM Checkout'){
      steps{
 	   git 'https://github.com/vijindas/my-web-app.git'
    }
-
+   }
    stage('Unit Testing'){
      steps{
              bat label: '', script: 'mvn clean test'
      }
    }
-      stage('Maven packing'){
+   stage('Maven packing'){
      steps{
            bat label: '', script: 'mvn clean package'
         }
@@ -41,6 +40,5 @@ stages{
        }
     }
    
-}
 }
 }
