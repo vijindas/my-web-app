@@ -14,7 +14,7 @@ stages{
 
    stage('SCM Checkout'){
      steps{
- git 'https://github.com/mohansgithub/simple-web-app.git'
+      git 'https://github.com/vijindas/my-web-app.git'
      }
    }
 
