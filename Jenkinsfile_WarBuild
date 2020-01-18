@@ -3,7 +3,7 @@ pipeline{
   tools {
       git 'git'
       maven 'maven'
-}
+  }
 
   environment {
         IMAGE_TAG = "${env.BUILD_NUMBER}"
@@ -14,7 +14,7 @@ stages{
 
    stage('SCM Checkout'){
      steps{
-       git 'https://github.com/vijindas/my-web-app.git'
+	   git 'https://github.com/vijindas/my-web-app.git'
    }
 
    stage('Unit Testing'){
